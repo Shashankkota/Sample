@@ -29,9 +29,12 @@
             z-index: 1000;
         }
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #6f4e37;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 45px;
+            width: auto;
         }
         nav a {
             margin-left: 20px;
@@ -77,29 +80,48 @@
         }
         .menu-section {
             padding: 60px 20px;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            text-align: center;
         }
         .menu-section h2 {
             font-size: 32px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #6f4e37;
         }
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .menu-card {
+        .menu-category {
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: left;
+            margin-bottom: 30px;
         }
-        .menu-card h3 {
-            margin-bottom: 10px;
+        .menu-category h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
             color: #6f4e37;
+            border-bottom: 2px dashed rgba(111, 78, 55, 0.2);
+            padding-bottom: 8px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .menu-item:last-child {
+            margin-bottom: 0;
+        }
+        .item-name {
+            font-weight: 600;
+            color: #4a3525;
+        }
+        .item-price {
+            font-weight: 700;
+            color: #6f4e37;
+            white-space: nowrap;
+            margin-left: 15px;
         }
         footer {
             text-align: center;
@@ -113,7 +135,9 @@
 <body>
 
     <header>
-        <div class="logo">COFFEE-IT</div>
+        <div class="logo">
+            <img src="image_2.png" alt="COFFEE-IT Logo">
+        </div>
         <nav>
             <a href="#home">Home</a>
             <a href="#menu">Menu</a>
@@ -128,19 +152,49 @@
     </section>
 
     <section id="menu" class="menu-section">
-        <h2>Cloud Cafe Signatures</h2>
-        <div class="menu-grid">
-            <div class="menu-card">
-                <h3>The Nimbus Latte</h3>
-                <p>Silky espresso infused with velvety steamed milk, topped with a thick cloud of microfoam.</p>
+        <h2>Our Menu</h2>
+        
+        <div class="menu-category">
+            <h3>Featured Cloud Brews</h3>
+            <div class="menu-item">
+                <span class="item-name">Classic Cloud Cappuccino</span>
+                <span class="item-price">₹229</span>
             </div>
-            <div class="menu-card">
-                <h3>Stratus Cold Brew</h3>
-                <p>Steeped for 24 hours for a smooth, bold taste that lifts you right up to cloud nine.</p>
+            <div class="menu-item">
+                <span class="item-name">Vietnamese Style Iced Coffee</span>
+                <span class="item-price">₹219</span>
             </div>
-            <div class="menu-card">
-                <h3>Cumulus Caramel Macchiato</h3>
-                <p>Rich espresso layered with sweet vanilla, fresh milk, and a decadent caramel drizzle.</p>
+            <div class="menu-item">
+                <span class="item-name">Hazelnut Cloud Latte</span>
+                <span class="item-price">₹239</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Mocha Kiss</span>
+                <span class="item-price">₹249</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Signature C.O.B. (Cold Orange Black)</span>
+                <span class="item-price">₹111</span>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>Espresso & More</h3>
+            <div class="menu-item">
+                <span class="item-name">Espresso Single</span>
+                <span class="item-price">₹129</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Americano</span>
+                <span class="item-price">₹149</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Café Latte</span>
+                <span class="item-price">₹199</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Flat White</span>
+                <span class="item-price">₹189</span>
             </div>
         </div>
     </section>
@@ -151,3 +205,6 @@
 
 </body>
 </html>
+
+
+
